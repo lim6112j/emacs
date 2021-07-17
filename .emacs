@@ -4,7 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(tango-dark))
- '(package-selected-packages '(multiple-cursors mark-multiple smex)))
+ '(haskell-mode-hook '(interactive-haskell-mode))
+ '(initial-frame-alist '((fullscreen . maximized)))
+ '(package-selected-packages '(evil multiple-cursors mark-multiple smex)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,3 +45,10 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (put 'upcase-region 'disabled nil)
 (global-set-key (kbd "M-o") (lambda () (interactive)(end-of-line)(newline)))
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
