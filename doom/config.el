@@ -65,13 +65,13 @@
        (:prefix-map ("j" . "journal")
         :desc "New Journal Entry" "j" #'org-journal-new-entry
         :desc "Search journal entry" "s" #'org-journal-search
-        )
+       )
        (:prefix-map ("w" . "window-small")
         :desc "window-shrink-height" "h" #'evil-window-set-height
         :desc "widonw-shrink-width" "w" #'evil-window-set-width
-        )
        )
       )
+)
 (setq org-agenda-files
       (append
        (file-expand-wildcards "~/workspace/org-documents/*.org")))
@@ -82,3 +82,10 @@
   :init
   (add-to-list 'exec-path "~/.elixir-ls/release")
 )
+(setq lsp-clients-clangd-args '("-j=3"
+                                "--background-index"
+                                "--clang-tidy"
+                                "--completion-style=detailed"
+                                "--header-insertion=never"
+                                "--header-insertion-decorators=0"))
+(after! lsp-clangd (set-lsp-priority! 'clangd 2))

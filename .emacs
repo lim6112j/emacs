@@ -9,7 +9,7 @@
  '(haskell-mode-hook '(interactive-haskell-mode))
  '(initial-frame-alist '((fullscreen . maximized)))
  '(package-selected-packages
-   '(magit company-ghci haskell-snippets flycheck-haskell exec-path-from-shell lsp-haskell haskell-mode evil multiple-cursors mark-multiple smex)))
+   '(treemacs-projectile treemacs projectile magit company-ghci haskell-snippets flycheck-haskell exec-path-from-shell lsp-haskell haskell-mode evil multiple-cursors mark-multiple smex)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,7 +32,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(global-set-key (kbd "C-.") #'other-window)
+;;(global-set-key (kbd "C-.") #'other-window)
 (global-set-key (kbd "C-,") #'prev-window)
 
 (defun prev-window ()
@@ -58,3 +58,9 @@
 (add-hook 'haskell-literate-mode-hook #'lsp)
 ;;(add-to-list 'exec-path "~/.ghcup/bin/")
 ;;(add-to-list 'exec-path "~/.local/bin/")
+(projectile-mode +1)
+;; for mac
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(set-face-attribute 'comint-highlight-prompt nil
+                    :inherit nil)
