@@ -51,3 +51,4 @@
 (package! haskell-mode)
 (package! lsp-haskell)
 (package! company-ghc)
+(package! pandoc)
