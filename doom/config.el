@@ -62,14 +62,8 @@
 ;; (evil-define-key 'normal 'global (kbd "<leader>fs") 'save-buffer)
 (map! :leader
       (:prefix-map ("a" . "applications")
-       (:prefix-map ("j" . "journal")
-        :desc "New Journal Entry" "j" #'org-journal-new-entry
-        :desc "Search journal entry" "s" #'org-journal-search
-       )
-       (:prefix-map ("w" . "window-small")
         :desc "window-shrink-height" "h" #'evil-window-set-height
         :desc "widonw-shrink-width" "w" #'evil-window-set-width
-       )
       )
 )
 (setq org-agenda-files
