@@ -52,6 +52,8 @@
 (global-set-key (kbd "M-o") (lambda () (interactive)(end-of-line)(newline)))
 (add-to-list 'load-path "~/.emacs.d/elpa/evil-1.14.0")
 (require 'evil)
+(require 'evil-leader)
+(global-evil-leader-mode)
 (evil-mode 1)
 (ido-mode 1)
 (add-hook 'haskell-mode-hook #'lsp)
@@ -64,3 +66,13 @@
 ;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (set-face-attribute 'comint-highlight-prompt nil
                     :inherit nil)
+(require 'key-chord)
+(key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
+(key-chord-mode 1)
+(evil-leader/set-leader ",")
+(evil-leader/set-key
+  "e" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-buffer
+  "g" 'magit-status
+  "s" 'save-buffer)
