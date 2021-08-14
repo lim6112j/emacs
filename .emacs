@@ -6,10 +6,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(tango-dark))
- '(haskell-mode-hook '(interactive-haskell-mode))
+ '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(package-selected-packages
-   '(treemacs-projectile treemacs projectile magit company-ghci haskell-snippets flycheck-haskell exec-path-from-shell lsp-haskell haskell-mode evil multiple-cursors mark-multiple smex)))
+   '(org-preview-html treemacs-projectile treemacs projectile magit company-ghci haskell-snippets flycheck-haskell exec-path-from-shell lsp-haskell haskell-mode evil multiple-cursors mark-multiple smex)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -75,4 +75,5 @@
   "b" 'switch-to-buffer
   "k" 'kill-buffer
   "g" 'magit-status
-  "s" 'save-buffer)
+  "s" 'save-buffer
+  "S" 'shell)
