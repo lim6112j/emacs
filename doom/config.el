@@ -66,9 +66,9 @@
         :desc "widonw-shrink-width" "w" #'evil-window-set-width
       )
 )
-(setq org-agenda-files
-      (append
-       (file-expand-wildcards "~/workspace/org-documents/*.org")))
+;; (setq org-agenda-files
+;;       (append
+;;        (file-expand-wildcards "~/workspace/org-documents/*.org")))
 (use-package! lsp-mode
   :commands lsp
   :hook
