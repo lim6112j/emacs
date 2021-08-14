@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Ben Lim"
+      user-mail-address "lim6112j@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -61,7 +61,7 @@
 (setq doom-localleader-alt-key "M-,")
 ;; (evil-define-key 'normal 'global (kbd "<leader>fs") 'save-buffer)
 (map! :leader
-      (:prefix-map ("a" . "applications")
+      (:prefix-map ("a" . "window-size")
         :desc "window-shrink-height" "h" #'evil-window-set-height
         :desc "widonw-shrink-width" "w" #'evil-window-set-width
       )
