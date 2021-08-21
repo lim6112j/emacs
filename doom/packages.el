@@ -52,4 +52,3 @@
 (package! lsp-haskell)
 (package! company-ghc)
 (package! pandoc)
-(package! org-roam)
