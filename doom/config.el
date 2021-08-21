@@ -64,6 +64,7 @@
       (:prefix-map ("a" . "window-size")
         :desc "window-shrink-height" "h" #'evil-window-set-height
         :desc "widonw-shrink-width" "w" #'evil-window-set-width
+        :desc "org-roam-id-refresh" "r" #'(org-id-update-id-locations (org-roam--list-all-files))
       )
 )
 ;; (setq org-agenda-files
