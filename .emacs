@@ -9,7 +9,7 @@
  '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(package-selected-packages
-   '(lsp-dart org-preview-html treemacs-projectile treemacs projectile magit company-ghci haskell-snippets flycheck-haskell exec-path-from-shell lsp-haskell haskell-mode evil multiple-cursors mark-multiple smex)))
+   '(ranger dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
