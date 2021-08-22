@@ -71,6 +71,7 @@
 (key-chord-mode 1)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
+  "d" 'dired
   "e" 'find-file
   "b" 'switch-to-buffer
   "k" 'kill-buffer
