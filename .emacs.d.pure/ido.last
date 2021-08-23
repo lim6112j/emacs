@@ -1,0 +1,129 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/codeguru/workspace/flutter-app/gecko_app/" . "lib/")
+ ("/Users/codeguru/workspace/flutter-app/" . "gecko_app/")
+ ("/Users/codeguru/workspace/emacs-setting/" . "doom/")
+ ("/Users/codeguru/workspace/elixir/gecko/lib/" . "gecko_web/")
+ ("/Users/codeguru/workspace/elixir/gecko/" . "lib/")
+ ("/Users/codeguru/workspace/elixir/" . "gecko/")
+ ("/Users/codeguru/workspace/clojure/" . "proj1/")
+ ("/Users/codeguru/workspace/haskel/udemy-lec/" . "app/")
+ ("/Users/codeguru/workspace/haskel/HaskellForGreaterGood/" . "app/")
+ ("/Users/codeguru/workspace/haskel/" . "RealWorldHaskell/")
+ ("/Users/codeguru/workspace/" . "cpp/")
+ ("/Users/codeguru/" . "workspace/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/codeguru/workspace/emacs-setting/"
+ "/Users/codeguru/"
+ "/Users/codeguru/workspace/flutter-app/gecko_app/lib/"
+ "/Users/codeguru/workspace/emacs-setting/doom/"
+ "/Users/codeguru/Applications/"
+ "/Users/codeguru/workspace/cpp/"
+ "/Users/codeguru/workspace/org-documents/"
+ "/Users/codeguru/org/"
+ "/Users/codeguru/workspace/haskel/RealWorldHaskell/src/ch05/"
+ "/Users/codeguru/workspace/emacs-lisp/"
+ "/Users/codeguru/workspace/elixir/gecko/lib/gecko_web/"
+ "/Users/codeguru/workspace/clojure/proj1/"
+ "/Users/codeguru/workspace/haskel/udemy-lec/src/"
+ "/Users/codeguru/workspace/haskel/HaskellForGreaterGood/src/"
+ "/Users/codeguru/workspace/haskel/udemy-lec/"
+ "/Users/codeguru/workspace/haskel/udemy-lec/app/"
+ "/Users/codeguru/workspace/haskel/HaskellForGreaterGood/app/"
+ "/Users/codeguru/workspace/haskel/HaskellForGreaterGood/"
+ "/Users/codeguru/.ghcup/bin/"
+ "/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ ".emacs~"
+ "bloodline.dart"
+ "config.el"
+ "foo.c"
+ "1.org"
+ "gecko.org"
+ "2.md"
+ "Concat.hs"
+ "study.lisp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/codeguru/workspace/emacs-setting/" (24866 31071 374957 964000) ".git/" ".emacs~" ".emacs" "doom/" "../" "./")
+
+ ("/Users/codeguru/" (24866 29225 22792 260000) ".composer/" ".smex-items" ".zsh_sessions/" ".viminfo" ".bash_history" ".gitconfig" ".cache/" "tmp/" "Downloads/" ".oh-my-zsh/" ".m2/" ".vscode/" ".ionic/" ".babel.json" "Documents/" ".npm/" ".ghcup/" ".zcompdump" ".Trash/" ".emacs~" ".ghc/" "Applications/" ".emacs" ".vimrc" "Movies/" ".ssh/" ".flutter" ".gitignore" "Public/" ".lein/" "intelephense/" ".pgadmin/" ".android/" ".node_repl_history" ".emacs.d/" ".elixir-ls/" ".gdbinit" ".doom.d/" ".lesshst" "Library/" "Desktop/" ".zsh_history" ".zcompdump-byeong의 MacBook Pro-5.8" ".v8flags.6.8.275.32-node.59.6d242eed35ddf4227f5a48d37aa1572c.json" "Postman/" ".pub-cache/" ".nvm/" ".dartServer/" ".tabnine/" ".emacs.d.doom/" "workspace/" "Pictures/" ".psql_history" ".local/" ".mix/" "org/" ".zshrc" ".zshrc.pre-oh-my-zsh" ".bashrc" ".cabal/" "Installing" ".CFUserTextEncoding" ".yarnrc" ".zshrc~" ".vuerc" ".DS_Store" "go/" ".dart/" "temp/" "change-mode.sh" ".docker/" "Mothion/" ".gitkraken/" "Music/" ".config/" ".hex/" ".vue-cli-ui/" "gdb-entitlement.xml" ".stack/" "../" "./")
+
+ ("/Users/codeguru/workspace/emacs-setting/doom/" (24866 27143 885618 801000) "init.el" "config.el" "packages.el" "../" "./")
+
+ ("/Users/codeguru/Applications/" (24732 1814 925806 251000) "Chrome Apps.localized/" ".localized" "../" "./")
+
+ ("/Users/codeguru/workspace/flutter-app/gecko_app/lib/" (24866 22209 404927 776000) "bloodline.dart" "main.dart" "favoitestar.dart" "homepage.dart" "../" "./")
+
+ ("/Users/codeguru/workspace/flutter-app/gecko_app/" (24865 1667 857096 864000) ".idea/" ".git/" "gecko_app.iml" ".dart_tool/" "build/" "lib/" "android/" ".gitignore" "pubspec.yaml" "README.md" "ios/" "pubspec.lock" "web/" ".metadata" "images/" "test/" ".packages" "../" "./")
+
+ ("/Users/codeguru/workspace/flutter-app/" (24863 60668 181331 907000) "gecko_app/" "../" "./")
+
+ ("/Users/codeguru/org/" (24864 37372 408677 990000) "gecko.org" "1.pdf" ".git/" "1.org" ".orgids" "brain/" "1.tex" "1.html" "ipsec.png" "roam/" "todo.org" "1.md" "main.org" "../" "./")
+
+ ("/Users/codeguru/workspace/cpp/" (24863 58125 93869 186000) "ch10" "betterjoin" "ch11" "main.cpp" "main" ".git/" "main.dSYM/" "app.dSYM/" "ch12.dSYM/" "ch13.dSYM/" ".gitignore" "readme.md" "betterjoin.cpp" "ch11.cpp" "ch10.cpp" "ch13" "ch10.dSYM/" "ch12.cpp" "ch13.cpp" "ch12" "ch11.dSYM/" "compile_commands.json" "app" "betterjoin.dSYM/" "foo.dSYM/" "../" "./")
+
+ ("/Users/codeguru/workspace/" (24863 60645 245624 780000) "emacs-setting/" "emacs-lisp/" "defi/" "haskel/" ".parcel-cache/" "vue_basic/" "cpp/" "flutter/" "flutter-app/" "functional-programming-javascript/" "php/" "CnCPP/" "vue/" "scss/" "elixir/" "clojure/" "d3_basic/" "workspace.code-workspace" ".DS_Store" "basic_grpc/" "ionic/" "vim-setting/" "../" "./")
+
+ ("/Users/codeguru/workspace/org-documents/" (24855 24090 954943 319000) "2.md" "gecko.org" "1.org~" "1.org" "test" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/RealWorldHaskell/src/ch05/" (24854 35841 595046 596000) "PutJSON.hs" "Prettify.hs" "Concat.hs" "SimpleJSON.hs" "PrettyJSON.hs" "PrettyStub.hs" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/RealWorldHaskell/src/" (24853 22671 764386 978000) "BookStore.hs" "ch05/" "add.hs" "myDrop.hs" "Lib.hs" "ch04/" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/RealWorldHaskell/" (24854 39647 936187 156000) "src/" ".stack-work/" ".git/" "RealWorldHaskell.cabal" "package.yaml" ".gitignore" "README.md" "TAGS" "stack.yaml.lock" "ChangeLog.md" "test/" "LICENSE" "app/" "Setup.hs" "stack.yaml" "../" "./")
+
+ ("/Users/codeguru/workspace/emacs-lisp/" (24855 20942 95872 336000) ".git/" "study.lisp" "#study.lisp#" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/udemy-lec/app/" (24847 21638 621874 272000) "hls.log" "Main.hs" "to-do.yaml" "Main.hs~" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/udemy-lec/" (24847 38806 117810 618000) "src/" ".idea/" ".stack-work/" "udemy-lec.cabal~" ".git/" "package.yaml" "package.yaml~" "udemy-lec.cabal" ".gitignore" "README.md" "tags" "to-do.yaml" "stack.yaml.lock" "stack.yaml~" "ChangeLog.md" "test/" "LICENSE" "app/" "Setup.hs" "stack.yaml" ".DS_Store" "udemy-lec.iml" "file.txt" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/udemy-lec/src/" (24847 17671 952861 283000) "DataSafe.hs~" "Lib.hs~" "Lib.hs" "DataSafe.hs" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/" (24850 41284 852437 388000) "f2d/" "HaskellForGreaterGood/" ".DS_Store" "RealWorldHaskell/" "udemy-lec/" "../" "./")
+
+ ("/Users/codeguru/workspace/elixir/gecko/lib/gecko_web/" (24828 28020 265338 728000) "channels/" "views/" "controllers/" "endpoint.ex" "templates/" "router.ex" "gettext.ex" "telemetry.ex" "../" "./")
+
+ ("/Users/codeguru/workspace/elixir/gecko/lib/" (24828 28020 245650 616000) "gecko/" "gecko.ex" "gecko_web.ex" "gecko_web/" "../" "./")
+
+ ("/Users/codeguru/workspace/elixir/gecko/app/" (24838 23886 187814 41000) "src/" "tsconfig.json" ".eslintrc.js" "vue.config.js" "package.json" "package-lock.json" ".gitignore" "babel.config.js" "public/" "README.md" "node_modules/" "../" "./")
+
+ ("/Users/codeguru/workspace/elixir/gecko/" (24846 7622 110817 654000) "assets/" ".git/" ".formatter.exs" "deps/" "lib/" "_build/" "package.json" "package-lock.json" ".gitignore" "priv/" ".elixir_ls/" "README.md" "node_modules/" "mix.lock" "config/" "test/" "app/" "mix.exs" "../" "./")
+
+ ("/Users/codeguru/workspace/elixir/" (24833 28046 336301 104000) "gecko/" "../" "./")
+
+ ("/Users/codeguru/workspace/clojure/proj1/" (24824 18825 102027 595000) "project.clj" "../" "./")
+
+ ("/Users/codeguru/workspace/clojure/" (24824 18758 798970 164000) "proj1/" ".DS_Store" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/HaskellForGreaterGood/src/" (24846 36741 911141 476000) "Lib.hs" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/HaskellForGreaterGood/app/" (24846 23574 346609 887000) "Main.hs" "Main.hs~" "../" "./")
+
+ ("/Users/codeguru/workspace/haskel/HaskellForGreaterGood/" (24846 22113 238671 837000) "src/" ".stack-work/" ".git/" "package.yaml" "Bool" ".gitignore" "IsBigGang" "README.md" "tags" "stack.yaml.lock" "ChangeLog.md" "test/" "LICENSE" "app/" "Setup.hs" "stack.yaml" ".DS_Store" "HaskellForGreaterGood.cabal" "../" "./")
+
+ ("/Users/codeguru/.local/" (24732 115 882375 490000) "bin/" "../" "./")
+
+ ("/Users/codeguru/.local/bin/" (24846 17771 134172 247000) "lein" "stack" "hasktags" "ghcid" "../" "./")
+
+ ("/Users/codeguru/.ghcup/bin/" (24846 18582 156208 51000) "hsc2hs-8.10" "hsc2hs-8.10.5" "cabal" "ghc-pkg-9.0" "runghc" "haskell-language-server-8.8.2~1.2.0" "ghc-pkg-9.0.1" "haskell-language-server-8.10.4~1.2.0" "hsc2hs" "hpc-9.0.1" "ghci" "runghc-9.0.1" "runhaskell-8.10.5" "haskell-language-server-8.10.2~1.2.0" "haskell-language-server-8.8.4~1.2.0" "ghc-pkg-8.10" "haskell-language-server-wrapper" "haskell-language-server-8.10.5~1.2.0" "hp2ps-8.10" "haskell-language-server-8.8.3~1.2.0" "haskell-language-server-8.10.3" "haskell-language-server-8.10.4" "haddock-8.10" "hpc-9.0" "haddock-9.0" "haskell-language-server-8.10.5" "haskell-language-server-8.10.2" "ghci-9.0" "hie.yaml~" "ghci-8.10" "runghc-8.10" "runhaskell-9.0.1" "haddock" "haskell-language-server-8.10.3~1.2.0" "haddock-8.10.5" "ghc" "ghc-8.10" "ghc-pkg" "hsc2hs-9.0" "ghc-pkg-8.10.5" "runhaskell-9.0" "hpc-8.10.5" "hpc" "hp2ps-8.10.5" "hpc-8.10" "ghc-8.10.5" "cabal-3.4.0.0" "runghc-8.10.5" "hsc2hs-9.0.1" "haskell-language-server-wrapper-1.2.0" "ghci-8.10.5" "ghc-9.0.1" "runghc-9.0" "haskell-language-server-8.6.4~1.2.0" "haskell-language-server-8.6.4" "hp2ps-9.0" "haskell-language-server-8.8.2" "haskell-language-server-8.6.5" "haskell-language-server-8.8.3" "haskell-language-server-8.8.4" "ghc-9.0" "hp2ps-9.0.1" "ghci-9.0.1" "hp2ps" "haskell-language-server-8.6.5~1.2.0" "runhaskell-8.10" "haddock-9.0.1" "ghcup" "runhaskell" "../" "./")
+
+ ("/Users/codeguru/.ghcup/" (24821 37549 912739 221000) "share/" "logs/" "ghc/" "env" "bin/" "cache/" "../" "./")
+
+ ("/Users/" (24076 20864 0 0) "byeongcheollim/" "Shared/" "codeguru/" ".localized" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
