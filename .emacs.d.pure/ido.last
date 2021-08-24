@@ -18,6 +18,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/lim6112j/emacs-setting/"
  "/Users/codeguru/workspace/emacs-setting/"
  "/Users/codeguru/"
  "/Users/codeguru/workspace/flutter-app/gecko_app/lib/"
@@ -56,6 +57,10 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/lim6112j/emacs-setting/" (24868 22314 570000 0) "./" "../" ".emacs~" "change-mode.sh" ".emacs" ".git/" "doom/" ".emacs.d.pure/")
+
+ ("/usr/share/info/" (24849 53533 780000 0) "gettext.info.gz" "./" "grep.info.gz" "reftex.info.gz" "../" "erc.info.gz" "remember.info.gz" "mh-e.info.gz" "screen.info-5.gz" "ccmode.info.gz" "wget.info.gz" "octave-mode.info.gz" "find.info.gz" "srecode.info.gz" "sed.info.gz" "screen.info-1.gz" "automake-1.16.info-2.gz" "flymake.info.gz" "gnupg.info-1.gz" "automake-1.16.info-1.gz" "sc.info.gz" "ido.info.gz" "auth.info.gz" "eww.info.gz" "newsticker.info.gz" "autosprintf.info.gz" "todo-mode.info.gz" "screen.info-4.gz" "tds.info.gz" "viper.info.gz" "cl.info.gz" "m4.info-2.gz" "eieio.info.gz" "htmlfontify.info.gz" "dvips.info.gz" "ede.info.gz" "efaq.info.gz" "edt.info.gz" "kpathsea.info.gz" "autotype.info.gz" "wisent.info.gz" "ed.info.gz" "emacs.info.gz" "info.info.gz" "forms.info.gz" "sasl.info.gz" "ebrowse.info.gz" "rluserman.info.gz" "smtpmail.info.gz" "widget.info.gz" "elisp.info.gz" "coreutils.info.gz" "org.info.gz" "find-maint.info.gz" "gnupg.info-2.gz" "gzip.info.gz" "find.info-2.gz" "ert.info.gz" "dbus.info.gz" "ediff.info.gz" "dired-x.info.gz" "idlwave.info.gz" "semantic.info.gz" "pgg.info.gz" "fontname.info.gz" "libffi.info.gz" "m4.info.gz" "epa.info.gz" "dir.gz" "automake-1.16.info.gz" "nano.info.gz" "url.info.gz" "tramp.info.gz" "rcirc.info.gz" "message.info.gz" "vhdl-mode.info.gz" "eshell.info.gz" "vip.info.gz" "speedbar.info.gz" "pcl-cvs.info.gz" "ses.info.gz" "eintr.info.gz" "gnupg-module-overview.png" "m4.info-1.gz" "nxml-mode.info.gz" "bovine.info.gz" "screen.info-3.gz" "sieve.info.gz" "mairix-el.info.gz" "dir.old" "find.info-1.gz" "gnupg-card-architecture.png" "web2c.info.gz" "eudc.info.gz" "gnupg.info.gz" "calc.info.gz" "emacs-gnutls.info.gz" "diffutils.info.gz" "screen.info.gz" "gnus.info.gz" "screen.info-2.gz" "info-stnd.info.gz" "time.info.gz" "emacs-mime.info.gz" "tlbuild.info.gz" "woman.info.gz" "bc.info.gz" "screen.info-6.gz")
+
  ("/Users/codeguru/workspace/emacs-setting/" (24866 31071 374957 964000) ".git/" ".emacs~" ".emacs" "doom/" "../" "./")
 
  ("/Users/codeguru/" (24866 29225 22792 260000) ".composer/" ".smex-items" ".zsh_sessions/" ".viminfo" ".bash_history" ".gitconfig" ".cache/" "tmp/" "Downloads/" ".oh-my-zsh/" ".m2/" ".vscode/" ".ionic/" ".babel.json" "Documents/" ".npm/" ".ghcup/" ".zcompdump" ".Trash/" ".emacs~" ".ghc/" "Applications/" ".emacs" ".vimrc" "Movies/" ".ssh/" ".flutter" ".gitignore" "Public/" ".lein/" "intelephense/" ".pgadmin/" ".android/" ".node_repl_history" ".emacs.d/" ".elixir-ls/" ".gdbinit" ".doom.d/" ".lesshst" "Library/" "Desktop/" ".zsh_history" ".zcompdump-byeong의 MacBook Pro-5.8" ".v8flags.6.8.275.32-node.59.6d242eed35ddf4227f5a48d37aa1572c.json" "Postman/" ".pub-cache/" ".nvm/" ".dartServer/" ".tabnine/" ".emacs.d.doom/" "workspace/" "Pictures/" ".psql_history" ".local/" ".mix/" "org/" ".zshrc" ".zshrc.pre-oh-my-zsh" ".bashrc" ".cabal/" "Installing" ".CFUserTextEncoding" ".yarnrc" ".zshrc~" ".vuerc" ".DS_Store" "go/" ".dart/" "temp/" "change-mode.sh" ".docker/" "Mothion/" ".gitkraken/" "Music/" ".config/" ".hex/" ".vue-cli-ui/" "gdb-entitlement.xml" ".stack/" "../" "./")

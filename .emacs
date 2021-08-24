@@ -5,17 +5,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(tango-dark))
+ '(custom-safe-themes
+   '("583148e87f779040b5349db48b6fcad6fe9a873c6ada20487e9a1ec40d845505" default))
  '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(package-selected-packages
    '(dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
-(custom-set-faces
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#2e3436" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Menlo")))))
+;;'(default ((t (:inherit nil :extend nil :stipple nil :background "#2e3436" :foreground "#eeeeec" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Menlo")))))
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
@@ -43,11 +44,11 @@
 ;;(require 'ghcid)
 (cd "~")
 (global-display-line-numbers-mode)
-(require 'multiple-cursors)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+;;(require 'multiple-cursors)
+;;(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;;(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+;;(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+;;(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (put 'upcase-region 'disabled nil)
 (global-set-key (kbd "M-o") (lambda () (interactive)(end-of-line)(newline)))
 (add-to-list 'load-path "~/.emacs.d/elpa/evil-1.14.0")
@@ -62,8 +63,8 @@
 ;;(add-to-list 'exec-path "~/.local/bin/")
 (projectile-mode +1)
 ;; for mac
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (set-face-attribute 'comint-highlight-prompt nil
                     :inherit nil)
 (require 'key-chord)
@@ -95,3 +96,4 @@
       company-minimum-prefix-length 1
       lsp-lens-enable t
       lsp-signature-auto-activate nil)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")

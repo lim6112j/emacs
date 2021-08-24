@@ -1,1 +1,1 @@
-("~/workspace/emacs-setting/" "~/workspace/flutter-app/gecko_app/" "~/" "~/workspace/cpp/" "~/workspace/haskel/RealWorldHaskell/" "~/org/" "~/workspace/emacs-lisp/" "~/workspace/haskel/HaskellForGreaterGood/" "~/workspace/haskel/udemy-lec/" "~/workspace/elixir/gecko/" "~/workspace/clojure/proj1/")
+("~/emacs-setting/" "~/" "~/org/")
