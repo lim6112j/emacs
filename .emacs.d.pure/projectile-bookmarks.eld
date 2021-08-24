@@ -1,1 +1,0 @@
-("~/workspace/emacs-setting/" "~/" "~/org/")
