@@ -68,6 +68,7 @@
 (set-face-attribute 'comint-highlight-prompt nil
                     :inherit nil)
 (require 'key-chord)
+(setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 (key-chord-mode 1)
 (evil-leader/set-leader ",")
@@ -97,3 +98,10 @@
       lsp-lens-enable t
       lsp-signature-auto-activate nil)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
