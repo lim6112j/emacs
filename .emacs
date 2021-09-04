@@ -80,6 +80,7 @@
   "k" 'kill-buffer
   "g" 'magit-status
   "s" 'save-buffer
+  "t" 'treemacs'
   "S" 'shell)
 
 (setq package-selected-packages 
