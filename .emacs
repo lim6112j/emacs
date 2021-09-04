@@ -34,7 +34,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-;;(global-set-key (kbd "C-.") #'other-window)
+(global-set-key (kbd "C-.") #'next-window-any-frame)
 (global-set-key (kbd "C-,") #'prev-window)
 
 (defun prev-window ()
@@ -109,3 +109,4 @@
  )
 (setq org-roam-v2-ack t)
 (setq org-return-follows-link  t)
+(put 'narrow-to-region 'disabled nil)
