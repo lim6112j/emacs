@@ -7,11 +7,11 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("583148e87f779040b5349db48b6fcad6fe9a873c6ada20487e9a1ec40d845505" default))
- '(haskell-mode-hook '(interactive-haskell-mode))
+ '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(org-roam-directory "/Users/codeguru/org/roam/")
  '(package-selected-packages
-   '(lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -110,3 +110,8 @@
 (setq org-roam-v2-ack t)
 (setq org-return-follows-link  t)
 (put 'narrow-to-region 'disabled nil)
+
+(unless (display-graphic-p)
+        (require 'evil-terminal-cursor-changer)
+        (evil-terminal-cursor-changer-activate) ; or (etcc-on)
+        )
