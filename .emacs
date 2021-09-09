@@ -115,3 +115,4 @@
         (require 'evil-terminal-cursor-changer)
         (evil-terminal-cursor-changer-activate) ; or (etcc-on)
         )
+(setq org-return-follows-link  t)
