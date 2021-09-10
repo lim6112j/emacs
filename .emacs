@@ -115,3 +115,6 @@
         (require 'evil-terminal-cursor-changer)
         (evil-terminal-cursor-changer-activate) ; or (etcc-on)
         )
+(setq org-return-follows-link  t)
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)

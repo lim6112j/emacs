@@ -1,4 +1,1 @@
-.emacs.d.pure/auto-save-list/
-.emacs.d.pure/ido.*
-.emacs.d.pure/projectile*
-.emacs.d.pure/.org-id-locations
+.emacs.d.pure/*
