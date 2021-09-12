@@ -118,3 +118,7 @@
 (setq org-return-follows-link  t)
 (add-hook 'haskell-mode-hook #'lsp)
 (add-hook 'haskell-literate-mode-hook #'lsp)
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
