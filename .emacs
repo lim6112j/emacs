@@ -11,7 +11,7 @@
  '(initial-frame-alist '((fullscreen . maximized)))
  '(org-roam-directory "/Users/codeguru/org/roam/")
  '(package-selected-packages
-   '(evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -80,7 +80,8 @@
   "k" 'kill-buffer
   "g" 'magit-status
   "s" 'save-buffer
-  "t" 'treemacs'
+  "t" 'treemacs
+  "c" 'lsp-execute-code-action
   "S" 'shell)
 
 (setq package-selected-packages 
@@ -122,3 +123,7 @@
   :ensure t
   :config
   (global-evil-surround-mode 1))
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
