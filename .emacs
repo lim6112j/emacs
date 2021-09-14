@@ -83,6 +83,7 @@
   "s" 'save-buffer
   "t" 'treemacs
   "c" 'lsp-execute-code-action
+  "f" 'lsp-format-buffer
   "S" 'shell)
 
 (setq package-selected-packages 
