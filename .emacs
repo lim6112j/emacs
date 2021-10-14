@@ -127,3 +127,17 @@
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
+					;wsl-copy
+(defun wsl-copy (start end)
+  (interactive "r")
+  (shell-command-on-region start end "clip.exe")
+  (deactivate-mark)
+)
+(defun wsl-paste ()
+  (interactive)
+  (let ((clipboard
+	 (shell-command-to-string "powershell.exe -command 'Get-Clipboard' 2> /dev/null")))
+    (setq clipboard (replace-regexp-in-string "\r" "" clipboard))
+    (setq clipboard (substring clipboard 0 -1))
+    (insert clipboard))
+)
