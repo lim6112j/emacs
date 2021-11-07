@@ -88,5 +88,5 @@
 
 :init
 
-(setq evil-escape-key-sequence "ff"))
+(setq evil-escape-key-sequence "df"))
 (setq-default evil-escape-delay 0.2)
