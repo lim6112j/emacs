@@ -84,3 +84,9 @@
                                 "--header-insertion=never"
                                 "--header-insertion-decorators=0"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+(use-package! evil-escape
+
+:init
+
+(setq evil-escape-key-sequence "ff"))
+(setq-default evil-escape-delay 0.2)
