@@ -48,7 +48,20 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+(package! gitconfig-mode
+	  :recipe (:host github :repo "magit/git-modes"
+			 :files ("gitconfig-mode.el")))
+(package! gitignore-mode
+	  :recipe (:host github :repo "magit/git-modes"
+			 :files ("gitignore-mode.el")))
+
 (package! haskell-mode)
 (package! lsp-haskell)
 (package! company-ghc)
 (package! pandoc)
+(package! phpactor
+  :recipe (:host github :repo "emacs-php/phpactor.el"
+           :files ("phpactor.el" "src/lisp/*.el")))
+(package! company-phpactor
+  :recipe (:host github :repo "emacs-php/phpactor.el"
+           :files ("company-phpactor.el" "src/lisp/*.el")))
