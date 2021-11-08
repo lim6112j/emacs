@@ -90,18 +90,3 @@
 
 (setq evil-escape-key-sequence "df"))
 (setq-default evil-escape-delay 0.2)
-(use-package! phpactor :ensure t)
-(use-package! company-phpactor :ensure t)
-
-(use-package php-mode
-  ;;
-  :hook ((php-mode . (lambda () (set (make-local-variable 'company-backends)
-       '(;; list of backends
-         company-phpactor
-         company-files
-         ))))))
-(add-hook 'php-mode-hook
-          (lambda ()
-            (make-local-variable 'eldoc-documentation-function)
-            (setq eldoc-documentation-function
-                  'phpactor-hover)))
