@@ -90,3 +90,4 @@
 
 (setq evil-escape-key-sequence "df"))
 (setq-default evil-escape-delay 0.2)
+(setq lsp-intelephense-licence-key "<key>")
