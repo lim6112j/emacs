@@ -60,14 +60,14 @@
 (projectile-mode +1)
 ;; for mac
 ;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;;(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (set-face-attribute 'comint-highlight-prompt nil
                     :inherit nil)
 (require 'key-chord)
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "df" 'evil-normal-state)
 (key-chord-mode 1)
-(evil-leader/set-leader ",")
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "h" 'windmove-left
   "H" 'evil-window-move-far-left
@@ -78,6 +78,7 @@
   "j" 'windmove-down
   "J" 'evil-window-move-very-bottom
   "d" 'dired
+  "p" 'projectile-command-map
   "e" 'find-file
   "b" 'switch-to-buffer
   "x" 'kill-buffer
