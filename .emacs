@@ -105,8 +105,9 @@
   :config
   (global-evil-surround-mode 1))
 (require 'yasnippet)
-(yas-global-mode 1)
-
+;;(yas-global-mode 1)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 (add-hook 'php-mode-hook
           '(lambda ()
             (require 'company-php)
