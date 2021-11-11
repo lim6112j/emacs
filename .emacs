@@ -42,9 +42,8 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(global-set-key (kbd "C-.") #'next-window-any-frame)
-(global-set-key (kbd "C-,") #'prev-window)
-
+;;(global-set-key (kbd "C-.") #'next-window-any-frame)
+;;(global-set-key (kbd "C-,") #'prev-window)
 (defun prev-window ()
   (interactive)
   (other-window -1))
@@ -70,10 +69,14 @@
 (key-chord-mode 1)
 (evil-leader/set-leader ",")
 (evil-leader/set-key
+  "h" 'windmove-left
+  "l" 'windmove-right
+  "k" 'windmove-up
+  "j" 'windmove-down
   "d" 'dired
   "e" 'find-file
   "b" 'switch-to-buffer
-  "k" 'kill-buffer
+  "x" 'kill-buffer
   "g" 'magit-status
   "s" 'save-buffer
   "t" 'treemacs
