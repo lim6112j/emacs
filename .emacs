@@ -12,7 +12,7 @@
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,13 +31,14 @@
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
   (mapc #'package-install package-selected-packages))
-;;(require 'smex) ; Not needed if you use package.el
-;;(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
+(require 'smex) ; Not needed if you use package.el
+(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
                     ; when Smex is auto-initialized on its first run.
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(global-set-key (kbd "M-x") 'smex)
+;;(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
@@ -111,3 +112,9 @@
             (require 'company-php)
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
