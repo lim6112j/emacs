@@ -1,5 +1,6 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
+(toggle-scroll-bar -1)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,7 +79,7 @@
   "J" 'evil-window-move-very-bottom
   "d" 'dired
   "p" 'projectile-command-map
-  "e" 'find-file
+  "e" 'counsel-find-file
   "b" 'switch-to-buffer
   "x" 'kill-buffer
   "g" 'magit-status
