@@ -25,6 +25,9 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
   (mapc #'package-install package-selected-packages))
@@ -44,19 +47,9 @@
 (defun prev-window ()
   (interactive)
   (other-window -1))
-(add-to-list 'load-path "~/.emacs.d/lisp")
-;;(load "ghcid.el")
-;;(require 'ghcid)
 (cd "~")
 (global-display-line-numbers-mode)
-;;(require 'multiple-cursors)
-;;(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-;;(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-;;(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-;;(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (put 'upcase-region 'disabled nil)
-(global-set-key (kbd "M-o") (lambda () (interactive)(end-of-line)(newline)))
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.14.0")
 (require 'evil)
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -64,8 +57,6 @@
 (ido-mode 1)
 (add-hook 'haskell-mode-hook #'lsp)
 (add-hook 'haskell-literate-mode-hook #'lsp)
-;;(add-to-list 'exec-path "~/.ghcup/bin/")
-;;(add-to-list 'exec-path "~/.local/bin/")
 (projectile-mode +1)
 ;; for mac
 ;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
@@ -99,12 +90,6 @@
       lsp-signature-auto-activate nil)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenburn)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (setq org-roam-v2-ack t)
 (setq org-return-follows-link  t)
 (put 'narrow-to-region 'disabled nil)
@@ -118,24 +103,8 @@
   :ensure t
   :config
   (global-evil-surround-mode 1))
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
-					;wsl-copy
-(defun wsl-copy (start end)
-  (interactive "r")
-  (shell-command-on-region start end "clip.exe")
-  (deactivate-mark)
-)
-(defun wsl-paste ()
-  (interactive)
-  (let ((clipboard
-	 (shell-command-to-string "powershell.exe -command 'Get-Clipboard' 2> /dev/null")))
-    (setq clipboard (replace-regexp-in-string "\r" "" clipboard))
-    (setq clipboard (substring clipboard 0 -1))
-    (insert clipboard))
-)
 
 (add-hook 'php-mode-hook
           '(lambda ()
