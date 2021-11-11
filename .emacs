@@ -55,8 +55,6 @@
 (global-evil-leader-mode)
 (evil-mode 1)
 (ido-mode 1)
-(add-hook 'haskell-mode-hook #'lsp)
-(add-hook 'haskell-literate-mode-hook #'lsp)
 (projectile-mode +1)
 ;; for mac
 ;;(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
@@ -91,7 +89,6 @@
   "S" 'shell)
 
 
-(add-hook 'dart-mode-hook 'lsp)
 
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
@@ -104,26 +101,30 @@
 (setq org-return-follows-link  t)
 (put 'narrow-to-region 'disabled nil)
 
-(unless (display-graphic-p)
-        (require 'evil-terminal-cursor-changer)
-        (evil-terminal-cursor-changer-activate) ; or (etcc-on)
-        )
+;;(unless (display-graphic-p)
+        ;;(require 'evil-terminal-cursor-changer)
+        ;;(evil-terminal-cursor-changer-activate) ; or (etcc-on)
+        ;;)
 (setq org-return-follows-link  t)
 (use-package evil-surround
   :ensure t
   :config
   (global-evil-surround-mode 1))
+(setq evil-normal-state-tag "NORMAL")
+(setq evil-insert-state-tag "INSERT")
+(setq evil-visual-state-tag "VISUAL")
+
 (require 'yasnippet)
 ;;(yas-global-mode 1)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
 (add-hook 'php-mode-hook
           '(lambda ()
             (require 'company-php)
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend)))
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(setq evil-normal-state-tag "NORMAL")
-(setq evil-insert-state-tag "INSERT")
-(setq evil-visual-state-tag "VISUAL")
+(add-hook 'dart-mode-hook 'lsp)
