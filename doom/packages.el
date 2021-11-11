@@ -65,3 +65,4 @@
 (package! company-phpactor
   :recipe (:host github :repo "emacs-php/phpactor.el"
            :files ("company-phpactor.el" "src/lisp/*.el")))
+(package! ess)
