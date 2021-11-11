@@ -70,9 +70,13 @@
 (evil-leader/set-leader ",")
 (evil-leader/set-key
   "h" 'windmove-left
+  "H" 'evil-window-move-far-left
   "l" 'windmove-right
+  "L" 'evil-window-move-far-right
   "k" 'windmove-up
+  "K" 'evil-window-move-very-top
   "j" 'windmove-down
+  "J" 'evil-window-move-very-bottom
   "d" 'dired
   "e" 'find-file
   "b" 'switch-to-buffer
