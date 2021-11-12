@@ -13,7 +13,7 @@
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -39,7 +39,7 @@
   (exec-path-from-shell-initialize))
 
 ;;(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
@@ -81,8 +81,8 @@
   "J" 'evil-window-move-very-bottom
   "d" 'dired
   "p" 'projectile-command-map
-  "e" 'counsel-find-file
-  "b" 'switch-to-buffer
+  "e" 'helm-find-files
+  "b" 'helm-mini
   "x" 'kill-buffer
   "g" 'magit-status
   "s" 'save-buffer
@@ -131,3 +131,19 @@
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend)))
 (add-hook 'dart-mode-hook 'lsp)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(require 'which-key)
+(which-key-mode)
+(with-eval-after-load 'lsp-mode
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+  (require 'dap-cpptools))
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
