@@ -66,3 +66,4 @@
   :recipe (:host github :repo "emacs-php/phpactor.el"
            :files ("company-phpactor.el" "src/lisp/*.el")))
 (package! ess)
+(package! evil-terminal-cursor-changer)
