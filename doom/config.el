@@ -90,7 +90,14 @@
 
 (setq evil-escape-key-sequence "df"))
 (setq-default evil-escape-delay 0.2)
-(setq lsp-intelephense-licence-key "<key>")
+(defun get-string-from-file (filepath)
+  "return filepath's file content"
+  (with-temp-buffer
+    (insert-file-contents filepath)
+    (buffer-string)))
+(setq lsp-intelephense-licence-key
+      (replace-regexp-in-string "\n$" ""
+                                (get-string-from-file "./key.txt")))
 (unless (display-graphic-p)
         (require 'evil-terminal-cursor-changer)
         (evil-terminal-cursor-changer-activate) ; or (etcc-on)
