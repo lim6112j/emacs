@@ -63,7 +63,7 @@
 (set-face-attribute 'comint-highlight-prompt nil
                     :inherit nil)
 (require 'key-chord)
-(setq key-chord-two-keys-delay 0.5)
+(setq key-chord-two-keys-delay 0.2)
 (key-chord-define evil-visual-state-map "df" 'evil-normal-state)
 (key-chord-define evil-insert-state-map "df" 'evil-normal-state)
 (key-chord-define evil-visual-state-map "jk" 'evil-normal-state)
