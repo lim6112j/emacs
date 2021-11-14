@@ -13,7 +13,7 @@
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(ess helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -71,25 +71,20 @@
 (key-chord-mode 1)
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "h" 'windmove-left
-  "H" 'evil-window-move-far-left
-  "l" 'windmove-right
-  "L" 'evil-window-move-far-right
-  "k" 'windmove-up
-  "K" 'evil-window-move-very-top
-  "j" 'windmove-down
-  "J" 'evil-window-move-very-bottom
+  "w" 'evil-window-map
   "d" 'dired
   "p" 'projectile-command-map
-  "e" 'helm-find-files
-  "b" 'helm-mini
-  "x" 'kill-buffer
-  "g" 'magit-status
-  "s" 'save-buffer
-  "t" 'treemacs
-  "c" 'lsp-execute-code-action
-  "f" 'lsp-format-buffer
-  "S" 'shell)
+  "f f" 'helm-find-files
+  "f s" 'save-buffer
+  "b b" 'helm-mini
+  "b k" 'kill-buffer
+  "g g" 'magit-status
+  "t t" 'treemacs
+  "t f" 'treemacs-create-file
+  "t d" 'treemacs-create-dir
+  "c c" 'lsp-execute-code-action
+  "c f" 'lsp-format-buffer
+  "s" 'shell)
 
 
 
