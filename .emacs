@@ -11,6 +11,8 @@
  '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
+ '(mac-command-modifier 'super)
+ '(mac-option-modifier 'meta)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
    '(ess helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
@@ -45,6 +47,8 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 ;;(global-set-key (kbd "C-.") #'next-window-any-frame)
 ;;(global-set-key (kbd "C-,") #'prev-window)
+(global-set-key (kbd "s-=") #'text-scale-increase)
+(global-set-key (kbd "s--") #'text-scale-decrease)
 (defun prev-window ()
   (interactive)
   (other-window -1))
