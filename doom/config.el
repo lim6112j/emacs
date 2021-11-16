@@ -97,7 +97,7 @@
     (buffer-string)))
 (setq lsp-intelephense-licence-key
       (replace-regexp-in-string "\n$" ""
-                                (get-string-from-file "./key.txt")))
+                                (get-string-from-file "~/key.txt")))
 (unless (display-graphic-p)
         (require 'evil-terminal-cursor-changer)
         (evil-terminal-cursor-changer-activate) ; or (etcc-on)
