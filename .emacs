@@ -13,9 +13,12 @@
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
  '(mac-command-modifier 'super)
  '(mac-option-modifier 'meta)
+ '(mac-right-option-modifier 'meta)
+ '(ns-alternate-modifier 'meta)
+ '(ns-command-modifier 'super)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(ess helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(treemacs-perspective perspective ess helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -147,3 +150,6 @@
 (add-hook 'objc-mode-hook 'irony-mode)
 
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((R . t)))
