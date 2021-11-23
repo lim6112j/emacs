@@ -7,18 +7,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("583148e87f779040b5349db48b6fcad6fe9a873c6ada20487e9a1ec40d845505" default))
+   '("78e9a3e1c519656654044aeb25acb8bec02579508c145b6db158d2cfad87c44e" "583148e87f779040b5349db48b6fcad6fe9a873c6ada20487e9a1ec40d845505" default))
  '(haskell-mode-hook '(interactive-haskell-mode) t)
  '(initial-frame-alist '((fullscreen . maximized)))
  '(lsp-dart-dap-flutter-hot-reload-on-save t)
- '(mac-command-modifier 'super)
- '(mac-option-modifier 'meta)
- '(mac-right-option-modifier 'meta)
  '(ns-alternate-modifier 'meta)
  '(ns-command-modifier 'super)
+ '(ns-right-alternate-modifier 'meta)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(treemacs-perspective perspective ess helm-projectile ccls irony ada-mode which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
+   '(lsp-pyright lsp-python-ms treemacs-perspective perspective ess helm-projectile ccls irony which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover)))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -153,3 +151,8 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)))
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
