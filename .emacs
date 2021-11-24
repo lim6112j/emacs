@@ -25,6 +25,12 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(when (cl-find-if-not #'package-installed-p package-selected-packages)
+  (package-refresh-contents)
+  (mapc #'package-install package-selected-packages))
 ;;(require 'smex) ; Not needed if you use package.el
 ;;(smex-initialize) ; Can be omitted. This might cause a (minimal) delay
                     ; when Smex is auto-initialized on its first run.
@@ -73,19 +79,23 @@
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "df" 'evil-normal-state)
 (key-chord-mode 1)
-(evil-leader/set-leader ",")
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
+  "w" 'evil-window-map
   "d" 'dired
-  "e" 'find-file
-  "b" 'switch-to-buffer
-  "k" 'kill-buffer
-  "g" 'magit-status
-  "s" 'save-buffer
-  "t" 'treemacs
-  "c" 'lsp-execute-code-action
-  "f" 'lsp-format-buffer
-  "S" 'shell)
-
+  "p" 'projectile-command-map
+  "f f" 'helm-find-files
+  "f s" 'save-buffer
+  "b b" 'helm-mini
+  "b k" 'kill-buffer
+  "g g" 'magit-status
+  "t t" 'treemacs
+  "t f" 'treemacs-create-file
+  "t d" 'treemacs-create-dir
+  "c c" 'lsp-execute-code-action
+  "c f" 'lsp-format-buffer
+  "q q" 'save-buffers-kill-emacs
+  "s" 'shell)
 (setq package-selected-packages 
   '(dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company
     ;; Optional packages
@@ -147,3 +157,8 @@
             (require 'company-php)
             (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend)))
+(require 'which-key)
+(which-key-mode)
+(with-eval-after-load 'lsp-mode
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+  (require 'dap-cpptools))
