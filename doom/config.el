@@ -90,13 +90,13 @@
 
 (setq evil-escape-key-sequence "df"))
 (setq-default evil-escape-delay 0.2)
- poetry
-(use-package! poetry
-  :ensure t
-  ;; :init
-  ;; imperfect tracking strategy causes lags in builds
-  ;; (setq poetry-tracking-strategy 'switch-buffer)
-  :hook
-  ;; activate poetry-tracking-mode when python-mode is active
-  (python-mode . poetry-tracking-mode)
-)
+;; poetry
+;;(use-package! poetry
+  ;;:ensure t
+  ;;;; :init
+  ;;;; imperfect tracking strategy causes lags in builds
+  ;;;; (setq poetry-tracking-strategy 'switch-buffer)
+  ;;:hook
+  ;;;; activate poetry-tracking-mode when python-mode is active
+  ;;(python-mode . poetry-tracking-mode)
+  ;;)
