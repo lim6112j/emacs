@@ -100,3 +100,4 @@
   ;;;; activate poetry-tracking-mode when python-mode is active
   ;;(python-mode . poetry-tracking-mode)
   ;;)
+(setq-default enable-local-variables t)
