@@ -7,6 +7,7 @@
  '(evil-collection-magit-use-z-for-folds t)
  '(magit-auto-revert-mode nil)
  '(magit-diff-refine-hunk t)
+ '(magit-log-auto-more t)
  '(magit-revision-insert-related-refs nil)
  '(magit-save-repository-buffers nil)
  '(magit-todos-keyword-suffix "\\(?:([^)]+)\\)?:?")
