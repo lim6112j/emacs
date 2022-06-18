@@ -77,6 +77,11 @@
   :init
   (add-to-list 'exec-path "~/.elixir-ls/release")
 )
+(use-package! lsp-mode
+  :commands lsp
+  :hook
+  (kotlin-mode . lsp)
+)
 (setq lsp-clients-clangd-args '("-j=3"
                                 "--background-index"
                                 "--clang-tidy"
@@ -115,3 +120,9 @@ lsp-ui-sideline-show-code-actions t
 lsp-ui-sideline-diagnostic-max-lines 20
 lsp-ui-sideline-ignore-duplicate t
 lsp-ui-sideline-enable t))
+(use-package! lsp-sourcekit
+  :after lsp-mode
+  :config
+  (setq lsp-sourcekit-executable "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
+(use-package! swift-mode
+  :hook (swift-mode . (lambda () (lsp))))

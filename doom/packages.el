@@ -68,3 +68,5 @@
 
 (package! ess
   :recipe (:host github :repo "emacs-ess/ESS"))
+
+(package! lsp-sourcekit)
