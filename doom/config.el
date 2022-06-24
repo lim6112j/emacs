@@ -123,6 +123,8 @@ lsp-ui-sideline-enable t))
 (use-package! lsp-sourcekit
   :after lsp-mode
   :config
-  (setq lsp-sourcekit-executable "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
+  (setq lsp-sourcekit-executable (string-trim (shell-command-to-string "xcrun --find sourcekit-lsp"))))
 (use-package! swift-mode
   :hook (swift-mode . (lambda () (lsp))))
+;; control return like shift return on intellij
+(define-key evil-normal-state-map (kbd "C-<return>") #'evil-open-below)
