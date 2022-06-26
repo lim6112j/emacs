@@ -70,3 +70,6 @@
   :recipe (:host github :repo "emacs-ess/ESS"))
 
 (package! lsp-sourcekit)
+(package! teletype :recipe (:host github :repo "lim6112j/custom-telegraph-lisp"))
+(provide 'packages)
+;;; packages.el ends here

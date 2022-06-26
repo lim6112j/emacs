@@ -128,3 +128,6 @@ lsp-ui-sideline-enable t))
   :hook (swift-mode . (lambda () (lsp))))
 ;; control return like shift return on intellij
 (define-key evil-normal-state-map (kbd "C-<return>") #'evil-open-below)
+(use-package! teletype)
+(provide 'config)
+;;; config.el ends here
