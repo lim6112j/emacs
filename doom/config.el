@@ -129,5 +129,7 @@ lsp-ui-sideline-enable t))
 ;; control return like shift return on intellij
 (define-key evil-normal-state-map (kbd "C-<return>") #'evil-open-below)
 (use-package! teletype)
+(define-key evil-normal-state-map (kbd "s-k") #'drag-stuff-up)
+(define-key evil-normal-state-map (kbd "s-j") #'drag-stuff-down)
 (provide 'config)
 ;;; config.el ends here
