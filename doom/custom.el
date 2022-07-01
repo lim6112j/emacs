@@ -37,6 +37,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages '(company-phpactor))
  '(ranger-override-dired-mode t)
+ '(rustic-cargo-bin "~/.cargo/bin/cargo")
  '(sbt:program-options
    '("-Dsbt.supershell=false -java-home /usr/local/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home"))
  '(size-indication-mode t)
