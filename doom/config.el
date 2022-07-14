@@ -131,5 +131,8 @@ lsp-ui-sideline-enable t))
 (use-package! teletype)
 (define-key evil-normal-state-map (kbd "s-k") #'drag-stuff-up)
 (define-key evil-normal-state-map (kbd "s-j") #'drag-stuff-down)
+;; cursor shape for raspberry
+;;(setq evil-insert-state-cursor '(bar "yellow")
+      ;;evil-normal-state-cursor '(box "purple")
 (provide 'config)
 ;;; config.el ends here
