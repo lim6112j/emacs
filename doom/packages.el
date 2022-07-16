@@ -55,21 +55,21 @@
 	  :recipe (:host github :repo "magit/git-modes"
 			 :files ("gitignore-mode.el")))
 
-(package! haskell-mode)
-(package! lsp-haskell)
-(package! company-ghc)
+;;(package! haskell-mode)
+;;(package! lsp-haskell)
+;;(package! company-ghc)
 (package! pandoc)
-(package! phpactor
-  :recipe (:host github :repo "emacs-php/phpactor.el"
-           :files ("phpactor.el" "src/lisp/*.el")))
-(package! company-phpactor
-  :recipe (:host github :repo "emacs-php/phpactor.el"
-           :files ("company-phpactor.el" "src/lisp/*.el")))
+;;(package! phpactor
+  ;;:recipe (:host github :repo "emacs-php/phpactor.el"
+           ;;:files ("phpactor.el" "src/lisp/*.el")))
+;;(package! company-phpactor
+  ;;:recipe (:host github :repo "emacs-php/phpactor.el"
+           ;;:files ("company-phpactor.el" "src/lisp/*.el")))
 
-(package! ess
-  :recipe (:host github :repo "emacs-ess/ESS"))
+;;(package! ess
+  ;;:recipe (:host github :repo "emacs-ess/ESS"))
 
-(package! lsp-sourcekit)
+;;(package! lsp-sourcekit)
 (package! teletype :recipe (:host github :repo "lim6112j/custom-teletype-lisp"))
 (provide 'packages)
 ;;; packages.el ends here

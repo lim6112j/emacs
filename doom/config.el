@@ -52,7 +52,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(setq haskell-stylish-on-save t)
+;;(setq haskell-stylish-on-save t)
 (after! counsel
   (setq counsel-rg-base-command "rg -M 240 --with-filename --no-heading --line-number --color never %s || true"))
 (add-hook! 'org-mode-hook #'+org-init-keybinds-h)
@@ -60,35 +60,35 @@
 (setq doom-localleader-key ",")
 (setq doom-localleader-alt-key "M-,")
 ;; (evil-define-key 'normal 'global (kbd "<leader>fs") 'save-buffer)
-(map! :leader
-      (:prefix-map ("a" . "window-size")
-        :desc "window-shrink-height" "h" #'evil-window-set-height
-        :desc "widonw-shrink-width" "w" #'evil-window-set-width
-        :desc "org-roam-id-refresh" "r" #'(org-id-update-id-locations (org-roam--list-all-files))
-      )
-)
+;;(map! :leader
+      ;;(:prefix-map ("a" . "window-size")
+        ;;:desc "window-shrink-height" "h" #'evil-window-set-height
+        ;;:desc "widonw-shrink-width" "w" #'evil-window-set-width
+        ;;:desc "org-roam-id-refresh" "r" #'(org-id-update-id-locations (org-roam--list-all-files))
+      ;;)
+;;)
 ;; (setq org-agenda-files
 ;;       (append
 ;;        (file-expand-wildcards "~/workspace/org-documents/*.org")))
-(use-package! lsp-mode
-  :commands lsp
-  :hook
-  (elixir-mode . lsp)
-  :init
-  (add-to-list 'exec-path "~/.elixir-ls/release")
-)
-(use-package! lsp-mode
-  :commands lsp
-  :hook
-  (kotlin-mode . lsp)
-)
-(setq lsp-clients-clangd-args '("-j=3"
-                                "--background-index"
-                                "--clang-tidy"
-                                "--completion-style=detailed"
-                                "--header-insertion=never"
-                                "--header-insertion-decorators=0"))
-(after! lsp-clangd (set-lsp-priority! 'clangd 2))
+;;(use-package! lsp-mode
+  ;;:commands lsp
+  ;;:hook
+  ;;(elixir-mode . lsp)
+  ;;:init
+  ;;(add-to-list 'exec-path "~/.elixir-ls/release")
+;;)
+;;(use-package! lsp-mode
+  ;;:commands lsp
+  ;;:hook
+  ;;(kotlin-mode . lsp)
+;;)
+;;(setq lsp-clients-clangd-args '("-j=3"
+;;                                "--background-index"
+;;                                "--clang-tidy"
+                                ;;"--completion-style=detailed"
+                                ;;"--header-insertion=never"
+                                ;;"--header-insertion-decorators=0"))
+;;(after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (use-package! evil-escape
 
 :init
@@ -107,25 +107,19 @@
   ;;)
 (setq-default enable-local-variables t)
 ;; Set global LSP options
-(after! lsp-mode (
-setq lsp-lens-enable t
-lsp-ui-peek-enable t
-lsp-ui-doc-enable nil
-lsp-ui-doc-position 'bottom
-lsp-ui-doc-max-height 70
-lsp-ui-doc-max-width 150
-lsp-ui-sideline-show-diagnostics t
-lsp-ui-sideline-show-hover nil
-lsp-ui-sideline-show-code-actions t
-lsp-ui-sideline-diagnostic-max-lines 20
-lsp-ui-sideline-ignore-duplicate t
-lsp-ui-sideline-enable t))
-(use-package! lsp-sourcekit
-  :after lsp-mode
-  :config
-  (setq lsp-sourcekit-executable (string-trim (shell-command-to-string "xcrun --find sourcekit-lsp"))))
-(use-package! swift-mode
-  :hook (swift-mode . (lambda () (lsp))))
+;;(after! lsp-mode (
+;;setq lsp-lens-enable t
+;;lsp-ui-peek-enable t
+;;lsp-ui-doc-enable nil
+;;lsp-ui-doc-position 'bottom
+;;lsp-ui-doc-max-height 70
+;;lsp-ui-doc-max-width 150
+;;lsp-ui-sideline-show-diagnostics t
+;;lsp-ui-sideline-show-hover nil
+;;lsp-ui-sideline-show-code-actions t
+;;lsp-ui-sideline-diagnostic-max-lines 20
+;;lsp-ui-sideline-ignore-duplicate t
+;;lsp-ui-sideline-enable t))
 ;; control return like shift return on intellij
 (define-key evil-normal-state-map (kbd "C-<return>") #'evil-open-below)
 (use-package! teletype)
