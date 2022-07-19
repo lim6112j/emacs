@@ -131,5 +131,6 @@ lsp-ui-sideline-enable t))
 (use-package! teletype)
 (define-key evil-normal-state-map (kbd "s-k") #'drag-stuff-up)
 (define-key evil-normal-state-map (kbd "s-j") #'drag-stuff-down)
+(define-key evil-normal-state-map (kbd "s-r") #'query-replace)
 (provide 'config)
 ;;; config.el ends here
