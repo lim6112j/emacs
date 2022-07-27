@@ -28,10 +28,10 @@
  '(flycheck-popup-tip-error-prefix "X ")
  '(global-flycheck-mode t)
  '(haskell-interactive-popup-errors nil)
+ '(lsp-dart-flutter-sdk-dir "/Users/byeongcheollim/flutter")
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
- '(lsp-metals-java-home
-   "/usr/local/Cellar/openjdk@11/11.0.12/libexec/openjdk.jdk/Contents/Home")
+ '(lsp-metals-java-home "")
  '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
