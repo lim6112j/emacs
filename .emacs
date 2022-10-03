@@ -79,6 +79,8 @@
 (key-chord-mode 1)
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
+  "/" 'swiper
+  "," 'counsel-switch-buffer
   ":" 'counsel-M-x
   "w" 'evil-window-map
   "d" 'dired
@@ -161,3 +163,7 @@
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
 (require 'rust-mode)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(global-set-key (kbd "C-M-u") 'universal-argument)
+;; (setq ivy-mode t)
+(setq ring-bell-function 'ignore)
