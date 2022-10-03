@@ -18,7 +18,7 @@
  '(ns-right-alternate-modifier 'meta)
  '(org-roam-directory "~/org/roam/")
  '(package-selected-packages
-   '(lsp-pyright lsp-python-ms treemacs-perspective perspective ess helm-projectile ccls irony which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover))
+   '(rust-mode lsp-pyright lsp-python-ms treemacs-perspective perspective ess helm-projectile ccls irony which-key magit helm realgud counsel lua-mode company-php projectile-ripgrep wgrep ivy org-evil yasnippet-snippets evil-surround php-mode evil-terminal-cursor-changer web-mode lsp-haskell evil-org org org-roam dart-mode lsp-mode lsp-dart lsp-treemacs flycheck company lsp-ui company hover))
  '(tool-bar-mode nil))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -79,6 +79,7 @@
 (key-chord-mode 1)
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
+  ":" 'counsel-M-x
   "w" 'evil-window-map
   "d" 'dired
   "p" 'projectile-command-map
@@ -159,3 +160,4 @@
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
+(require 'rust-mode)

@@ -132,5 +132,7 @@ lsp-ui-sideline-enable t))
 (define-key evil-normal-state-map (kbd "s-k") #'drag-stuff-up)
 (define-key evil-normal-state-map (kbd "s-j") #'drag-stuff-down)
 (define-key evil-normal-state-map (kbd "s-r") #'query-replace)
+(define-key evil-normal-state-map (kbd "s-g") #'hoogle)
+(require 'dap-chrome)
 (provide 'config)
 ;;; config.el ends here
