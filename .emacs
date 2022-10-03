@@ -95,6 +95,7 @@
   "t d" 'treemacs-create-dir
   "c c" 'lsp-execute-code-action
   "c f" 'lsp-format-buffer
+  "c k" 'lsp-describe-thing-at-point
   "q q" 'save-buffers-kill-emacs
   "s" 'shell)
 
