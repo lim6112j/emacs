@@ -129,5 +129,7 @@
 ;; cursor shape for raspberry
 ;;(setq evil-insert-state-cursor '(bar "yellow")
       ;;evil-normal-state-cursor '(box "purple")
+;; super key remapping to 'C-c s'
+(define-key function-key-map (kbd "C-c s") 'event-apply-super-modifier)
 (provide 'config)
 ;;; config.el ends here

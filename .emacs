@@ -168,3 +168,5 @@
 (global-set-key (kbd "C-M-u") 'universal-argument)
 ;; (setq ivy-mode t)
 (setq ring-bell-function 'ignore)
+;; super key remapping to 'C-c s'
+(define-key function-key-map (kbd "C-c s") 'event-apply-super-modifier)
