@@ -18,11 +18,12 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 (use-package command-log-mode)
-(when (eq system-type 'darwin)
-  (setq
-   ns-command-modifier 'super
-   ns-option-modifier 'meta
-   ns-function-modifier 'hyper))
+(setq mac-command-modifier      'super
+      ns-command-modifier       'super
+      mac-option-modifier       'meta
+      ns-option-modifier        'meta
+      mac-right-option-modifier 'none
+      ns-right-option-modifier  'none)
 (use-package which-key)
 (require 'which-key)
 (which-key-mode 1)
@@ -63,15 +64,18 @@
   "p" 'projectile-command-map
   "f f" 'find-file
   "f s" 'save-buffer
-  "b b" 'ivy-switch-buffer
+  "b b" 'helm-mini
+  "b k" 'kill-buffer
   "," 'ivy-switch-buffer
   "t f" 'treemacs-create-file
   "t d" 'treemacs-create-dir
   "c c" 'lsp-execute-code-action
   "c f" 'lsp-format-buffer
   "q q" 'save-buffers-kill-emacs
+  "g g" 'magit-status
   "e" 'eval-region
   ":" 'execute-extended-command
+  "/" 'project-search
   "s" 'shell)
 
 (unless (package-installed-p 'key-chord)
@@ -87,13 +91,26 @@
   :ensure t
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
+(use-package projectile)
+(projectile-mode +1)
+;; Recommended keymap prefix on macOS
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+;; Recommended keymap prefix on Windows/Linux
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+(unless (package-installed-p 'magit)
+  (package-install 'magit))
+
+(unless (package-installed-p 'helm)
+  (package-install 'helm))
+(require 'helm)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(doom-modeline key-chord evil-leader evil swiper which-key command-log-mode use-package)))
+   '(helm magit projectile projectile-mode doom-modeline key-chord evil-leader evil swiper which-key command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
