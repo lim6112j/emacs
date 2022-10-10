@@ -24,9 +24,6 @@
       ns-option-modifier        'meta
       mac-right-option-modifier 'none
       ns-right-option-modifier  'none)
-(use-package which-key)
-(require 'which-key)
-(which-key-mode 1)
 (use-package swiper :ensure t)
 (use-package ivy
   :diminish
@@ -49,14 +46,39 @@
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
+;; lsp
+(unless (package-installed-p 'lsp-mode)
+  (package-install 'lsp-mode))
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "s-l")
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+         ;;(xxx-mode . lsp)
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
 
+;; optionally
+(use-package lsp-ui :commands lsp-ui-mode)
+;; if you are helm user
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+;; if you are ivy user
+;;(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+;; optionally if you want to use debugger
+(use-package dap-mode)
+;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+;; optional if you want which-key integration
+(use-package which-key
+    :config
+    (which-key-mode))
 ;; Enable Evil
-(require 'evil)
-(evil-mode 1)
-(unless (package-installed-p 'evil-leader)
-  (package-install 'evil-leader))
 (require 'evil-leader)
 (global-evil-leader-mode)
+(unless (package-installed-p 'evil-leader)
+  (package-install 'evil-leader))
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "w" 'evil-window-map
@@ -69,8 +91,6 @@
   "," 'ivy-switch-buffer
   "t f" 'treemacs-create-file
   "t d" 'treemacs-create-dir
-  "c c" 'lsp-execute-code-action
-  "c f" 'lsp-format-buffer
   "q q" 'save-buffers-kill-emacs
   "g g" 'magit-status
   "e" 'eval-region
@@ -78,6 +98,8 @@
   "/" 'project-search
   "s" 'shell)
 
+(require 'evil)
+(evil-mode 1)
 (unless (package-installed-p 'key-chord)
   (package-install 'key-chord))
 (require 'key-chord)
