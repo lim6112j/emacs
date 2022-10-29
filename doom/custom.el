@@ -35,7 +35,7 @@
  '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
- '(package-selected-packages '(company-phpactor))
+ '(package-selected-packages '(use-package company-phpactor))
  '(ranger-override-dired-mode t)
  '(rustic-cargo-bin "~/.cargo/bin/cargo")
  '(sbt:program-options
@@ -43,12 +43,12 @@
  '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(treemacs-filewatch-mode t)
- '(treemacs-follow-after-init t)
+ '(treemacs-follow-after-init t t)
  '(treemacs-fringe-indicator-mode t)
  '(treemacs-git-mode 'simple)
- '(treemacs-is-never-other-window t)
+ '(treemacs-is-never-other-window t t)
  '(treemacs-no-png-images nil)
- '(treemacs-sorting 'alphabetic-case-insensitive-asc))
+ '(treemacs-sorting 'alphabetic-case-insensitive-asc t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

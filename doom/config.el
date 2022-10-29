@@ -35,6 +35,10 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(setq mac-alternate-modifier 'meta)
+(setq ns-alternate-modifier 'meta)
+(setq mac-command-modifier 'super)
+(setq ns-command-modifier 'super)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -132,5 +136,6 @@ lsp-ui-sideline-enable t))
 (define-key evil-normal-state-map (kbd "s-k") #'drag-stuff-up)
 (define-key evil-normal-state-map (kbd "s-j") #'drag-stuff-down)
 (define-key evil-normal-state-map (kbd "s-r") #'query-replace)
+(use-package! dap-chrome)
 (provide 'config)
 ;;; config.el ends here
