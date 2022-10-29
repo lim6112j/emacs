@@ -167,3 +167,4 @@
 (global-set-key (kbd "C-M-u") 'universal-argument)
 ;; (setq ivy-mode t)
 (setq ring-bell-function 'ignore)
+(require 'counsel-projectile)
