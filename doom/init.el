@@ -117,7 +117,7 @@
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
-       csharp +lsp +dotnet          ; unity, .NET, and mono shenanigans
+       (csharp +lsp +dotnet)          ; unity, .NET, and mono shenanigans
        ;;data              ; config/data formats
        (dart +lsp +flutter)   ; paint ui and not much else
        (elixir +lsp)            ; erlang done right
@@ -127,7 +127,7 @@
        ;;ess               ; emacs speaks statistics
        ;;factor
        ;;faust             ; dsp, but you get to keep your soul
-       fsharp +lsp           ; ML stands for Microsoft's Language
+       (fsharp +lsp)           ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
        ;;(go +lsp)         ; the hipster dialect
@@ -139,7 +139,7 @@
        (java +lsp) ; the poster child for carpal tunnel syndrome
        (javascript +lsp)       ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
-       kotlin +lsp          ; a better, slicker Java(Script)
+       (kotlin +lsp)          ; a better, slicker Java(Script)
        ;;latex             ; writing papers in Emacs has never been so fun
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
@@ -159,13 +159,13 @@
        rest              ; Emacs as a REST client
        ;;rst               ; ReST in peace
        ;;(ruby +rails)     ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
-       rust +lsp             ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       (rust +lsp)             ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        (scala +lsp)            ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
        sh                ; she sells {ba,z,fi}sh shells on the C xor
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
-       swift +lsp            ; who asked for emoji variables?
+       (swift +lsp)            ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        (web +lsp)              ; the tubes
        ;;yaml              ; JSON, but readable
