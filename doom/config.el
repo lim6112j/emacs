@@ -134,5 +134,6 @@ lsp-ui-sideline-enable t))
 (define-key evil-normal-state-map (kbd "s-r") #'query-replace)
 (define-key evil-normal-state-map (kbd "s-g") #'hoogle)
 (require 'dap-chrome)
+(add-hook 'wsd-mode-hook 'company-mode)
 (provide 'config)
 ;;; config.el ends here
