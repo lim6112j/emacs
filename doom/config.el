@@ -143,5 +143,15 @@ lsp-ui-sideline-enable t))
 (setq plantuml-default-exec-mode 'jar)
 (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
 (org-babel-do-load-languages 'org-babel-load-languages '((plantuml . t)))
+(defconst my-protobuf-style
+  '((c-basic-offset . 2)
+    (indent-tabs-mode . nil)))
+(add-hook 'protobuf-mode-hook
+          (lambda () (c-add-style "my-style" my-protobuf-style t))
+          )
+(setenv "PATH" (concat (getenv "PATH") ":/Users/byeongcheollim/.ghcup/bin"))
+(setq exec-path (append exec-path '("/Users/byeongcheollim/.ghcup/bin")))
+;; for restclient https error resolve
+(after! restclient (require 'gnutls))
 (provide 'config)
 ;;; config.el ends here
