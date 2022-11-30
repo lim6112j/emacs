@@ -23,7 +23,6 @@
  '(flycheck-display-errors-function 'flycheck-popup-tip-show-popup)
  '(flycheck-emacs-lisp-load-path 'inherit)
  '(flycheck-idle-change-delay 1.0)
- ;; '(flycheck-indication-mode 'right-fringe)
  '(flycheck-lua-executable nil)
  '(flycheck-popup-tip-error-prefix "X ")
  '(global-flycheck-mode t)
@@ -65,11 +64,11 @@
  '(tool-bar-mode nil)
  '(treemacs-filewatch-mode t)
  '(treemacs-follow-after-init t)
- ;; '(treemacs-fringe-indicator-mode t)
  '(treemacs-git-mode 'simple)
  '(treemacs-is-never-other-window t)
  '(treemacs-no-png-images nil)
- '(treemacs-sorting 'alphabetic-case-insensitive-asc))
+ '(treemacs-sorting 'alphabetic-case-insensitive-asc)
+ '(typescript-indent-level 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
