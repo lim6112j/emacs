@@ -136,6 +136,6 @@ lsp-ui-sideline-enable t))
 (require 'dap-chrome)
 (add-hook 'wsd-mode-hook 'company-mode)
 ;; edit if psql location changed
-(setq sql-postgres-program "/Applications/Postgres.app/Contents/Versions/latest/bin")
+(setq sql-postgres-program "/Applications/Postgres.app/Contents/Versions/latest/bin/psql")
 (provide 'config)
 ;;; config.el ends here
