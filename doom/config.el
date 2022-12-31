@@ -135,5 +135,7 @@ lsp-ui-sideline-enable t))
 (define-key evil-normal-state-map (kbd "s-g") #'hoogle)
 (require 'dap-chrome)
 (add-hook 'wsd-mode-hook 'company-mode)
+;; edit if psql location changed
+(setq sql-postgres-program "/Applications/Postgres.app/Contents/Versions/latest/bin")
 (provide 'config)
 ;;; config.el ends here
