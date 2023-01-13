@@ -153,5 +153,6 @@ lsp-ui-sideline-enable t))
 (setq exec-path (append exec-path '("/Users/byeongcheollim/.ghcup/bin")))
 ;; for restclient https error resolve
 (after! restclient (require 'gnutls))
+(setq sql-postgres-program "/Applications/Postgres.app/Contents/Versions/latest/bin/psql")
 (provide 'config)
 ;;; config.el ends here
