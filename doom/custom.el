@@ -33,7 +33,10 @@
  '(lsp-metals-java-home "")
  '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
  '(lsp-xml-format-split-attributes t)
+ '(lsp-zig-zls-executable "~/workspace/zig/zls/zig-out/bin/zls")
  '(menu-bar-mode nil)
+ '(org-agenda-files
+   '("/Users/byeongcheollim/org/" "/Users/byeongcheollim/org/roam/"))
  '(org-startup-with-inline-images t)
  '(package-selected-packages '(use-package company-phpactor))
  '(ranger-override-dired-mode t)

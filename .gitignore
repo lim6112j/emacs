@@ -1,2 +1,4 @@
 .emacs.d.pure/*
 theme/
+/doom/.bsp/
+/doom/target/
