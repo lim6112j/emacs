@@ -34,6 +34,7 @@
  '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
+ '(org-startup-with-inline-images t)
  '(package-selected-packages '(use-package company-phpactor))
  '(ranger-override-dired-mode t)
  '(rustic-cargo-bin "~/.cargo/bin/cargo")
