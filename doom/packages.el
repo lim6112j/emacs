@@ -73,5 +73,6 @@
 (package! teletype :recipe (:host github :repo "lim6112j/custom-teletype-lisp"))
 (package! wsd-mode)
 (package! protobuf-mode)
+(package! ob-kotlin)
 (provide 'packages)
 ;;; packages.el ends here

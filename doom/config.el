@@ -154,5 +154,14 @@ lsp-ui-sideline-enable t))
 ;; for restclient https error resolve
 (after! restclient (require 'gnutls))
 (setq sql-postgres-program "/Applications/Postgres.app/Contents/Versions/latest/bin/psql")
+;; kotlin
+(use-package ob-kotlin
+  :ensure t
+  :defer t
+  :commands (org-babel-execute:kotlin)
+  :config
+  (add-to-list 'org-babel-load-languages '(kotlin . t))
+  (org-babel-do-load-languages 'org-babel-load-languages org-babel-load-languages)
+  (add-to-list 'org-babel-tangle-lang-exts '("kotlin" . "kt")))
 (provide 'config)
 ;;; config.el ends here
