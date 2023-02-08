@@ -181,5 +181,8 @@ lsp-ui-sideline-enable t))
                100)
           '(90 . 50) '(100 . 100)))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
+;; for ruby solargraph lsp
+(setq exec-path (append exec-path '("/Users/byeongcheollim/.gem/bin")))
+
 (provide 'config)
 ;;; config.el ends here
