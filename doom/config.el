@@ -156,5 +156,6 @@ lsp-ui-sideline-enable t))
                100)
           '(85 . 50) '(100 . 100)))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
+(setq exec-path (append exec-path '("/Users/byeongcheollim/.rbenv/versions/2.7.5/bin")))
 (provide 'config)
 ;;; config.el ends here
