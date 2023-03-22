@@ -166,8 +166,8 @@ lsp-ui-sideline-enable t))
 ;; transparency frame
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
 ;;(set-frame-parameter (selected-frame) 'alpha <both>)
-(set-frame-parameter (selected-frame) 'alpha '(90 . 50))
-(add-to-list 'default-frame-alist '(alpha . (90 . 50)))
+(set-frame-parameter (selected-frame) 'alpha '(60 . 50))
+(add-to-list 'default-frame-alist '(alpha . (60 . 50)))
 (defun toggle-transparency ()
   "Toggle Transparency."
   (interactive)
@@ -179,7 +179,7 @@ lsp-ui-sideline-enable t))
                      ;; Also handle undocumented (<active> <inactive>) form.
                      ((numberp (cadr alpha)) (cadr alpha)))
                100)
-          '(90 . 50) '(100 . 100)))))
+          '(60 . 50) '(100 . 100)))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 ;; for ruby solargraph lsp
 (setq exec-path (append exec-path '("/Users/byeongcheollim/.gem/bin")))
