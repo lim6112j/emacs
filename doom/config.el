@@ -183,6 +183,15 @@ lsp-ui-sideline-enable t))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 ;; for ruby solargraph lsp
 (setq exec-path (append exec-path '("/Users/byeongcheollim/.gem/bin")))
+;; github copilot
+;; accept completion from copilot and fallback to company
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 (provide 'config)
 ;;; config.el ends here

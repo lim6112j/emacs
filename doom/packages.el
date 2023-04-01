@@ -74,5 +74,7 @@
 (package! wsd-mode)
 (package! protobuf-mode)
 (package! ob-kotlin)
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
 (provide 'packages)
 ;;; packages.el ends here
