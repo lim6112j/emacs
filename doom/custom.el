@@ -34,6 +34,8 @@
  '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
+ '(org-agenda-files
+   '("~/org/roam/20220917025026-ciel.org" "/Users/codeguru/org/1.org" "/Users/codeguru/org/gecko.org" "/Users/codeguru/org/journal.org" "/Users/codeguru/org/main.org" "/Users/codeguru/org/notes.org" "/Users/codeguru/org/todo.org"))
  '(org-src-lang-modes
    '(("php" . php)
      ("rust" . rustic)
