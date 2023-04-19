@@ -93,7 +93,7 @@
 
 :init
 
-(setq evil-escape-key-sequence "df"))
+(setq evil-escape-key-sequence "jk"))
 (setq-default evil-escape-delay 0.2)
 ;; poetry
 ;;(use-package! poetry
