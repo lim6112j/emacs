@@ -76,5 +76,8 @@
 (package! ob-kotlin)
 (package! copilot
   :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+;; org roam ui
+(unpin! org-roam)
+(package! org-roam-ui)
 (provide 'packages)
 ;;; packages.el ends here
