@@ -36,6 +36,19 @@
  '(menu-bar-mode nil)
  '(org-agenda-files
    '("~/org/roam/20220917025026-ciel.org" "/Users/codeguru/org/1.org" "/Users/codeguru/org/gecko.org" "/Users/codeguru/org/journal.org" "/Users/codeguru/org/main.org" "/Users/codeguru/org/notes.org" "/Users/codeguru/org/todo.org"))
+ '(org-roam-capture-templates
+   '(("l" "programming language" plain "* Characteristic\n\n- Family: %?\n- inspired by: \n\n* Reference:\n\n" :target
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
+        ")
+      :unnarrowed t nil nil)
+     ("p" "project" plain "* Goals\n\n%?\n\n* Tasks\n\n** TODO Add initial tasks\n\n* Dates\n\n"
+      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
+      :unnarrowed t)
+     ("d" "default" plain "%?" :target
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
+")
+      :unnarrowed t)))
+ '(org-roam-db-autosync-mode t)
  '(org-src-lang-modes
    '(("php" . php)
      ("rust" . rustic)
