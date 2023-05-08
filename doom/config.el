@@ -175,5 +175,6 @@ lsp-ui-sideline-enable t))
                     org-roam-ui-follow t
                     org-roam-ui-update-on-save t
                     org-roam-ui-open-on-start t))
+(setq exec-path (append exec-path '("/Users/codeguru/.nvm/versions/node/v14.21.1/bin/node")))
 (provide 'config)
 ;;; config.el ends here
