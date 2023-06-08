@@ -183,6 +183,8 @@ lsp-ui-sideline-enable t))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 ;; for ruby solargraph lsp
 (setq exec-path (append exec-path '("/Users/byeongcheollim/.gem/bin")))
+;; for latex
+(setq exec-path (append exec-path '("/Library/TeX/texbin")))
 ;; github copilot
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
