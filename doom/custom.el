@@ -8,7 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(dired-auto-revert-buffer t)
- '(dired-create-destination-dirs 'ask t)
+ '(dired-create-destination-dirs 'ask)
  '(dired-dwim-target t)
  '(dired-hide-details-hide-symlink-targets nil)
  '(dired-listing-switches "-ahl -v --group-directories-first")
@@ -31,7 +31,8 @@
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
- '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
+ '(lsp-pyright-venv-directory "./venv")
+ '(lsp-pyright-venv-path nil)
  '(lsp-xml-format-split-attributes t)
  '(lsp-zig-zls-executable "~/workspace/zig/zls/zig-out/bin/zls")
  '(menu-bar-mode nil)
