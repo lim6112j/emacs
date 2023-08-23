@@ -8,7 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(dired-auto-revert-buffer t)
- '(dired-create-destination-dirs 'ask t)
+ '(dired-create-destination-dirs 'ask)
  '(dired-dwim-target t)
  '(dired-hide-details-hide-symlink-targets nil)
  '(dired-listing-switches "-ahl -v --group-directories-first")
@@ -37,13 +37,31 @@
  '(org-agenda-files
    '("~/org/roam/20220917025026-ciel.org" "/Users/codeguru/org/1.org" "/Users/codeguru/org/gecko.org" "/Users/codeguru/org/journal.org" "/Users/codeguru/org/main.org" "/Users/codeguru/org/notes.org" "/Users/codeguru/org/todo.org"))
  '(org-roam-capture-templates
-   '(("l" "programming language" plain "* Characteristic\n\n- Family: %?\n- inspired by: \n\n* Reference:\n\n" :target
-      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
+   '(("l" "programming language" plain "* Characteristic
+
+- Family: %?
+- inspired by: 
+
+* Reference:
+
+" :target
+(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
         ")
-      :unnarrowed t nil nil)
-     ("p" "project" plain "* Goals\n\n%?\n\n* Tasks\n\n** TODO Add initial tasks\n\n* Dates\n\n"
-      :if-new (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+filetags: Project")
-      :unnarrowed t)
+:unnarrowed t nil nil)
+     ("p" "project" plain "* Goals
+
+%?
+
+* Tasks
+
+** TODO Add initial tasks
+
+* Dates
+
+" :if-new
+(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
+#+filetags: Project")
+:unnarrowed t)
      ("d" "default" plain "%?" :target
       (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
 ")
@@ -83,7 +101,8 @@
  '(treemacs-is-never-other-window t)
  '(treemacs-no-png-images nil)
  '(treemacs-sorting 'alphabetic-case-insensitive-asc)
- '(typescript-indent-level 2))
+ '(typescript-indent-level 2)
+ '(warning-suppress-types '((lsp-mode) (defvaralias))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
