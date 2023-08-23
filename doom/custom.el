@@ -27,7 +27,7 @@
  '(flycheck-popup-tip-error-prefix "X ")
  '(global-flycheck-mode t)
  '(haskell-interactive-popup-errors nil)
- '(lsp-dart-flutter-sdk-dir "/Users/byeongcheollim/flutter")
+ '(lsp-dart-flutter-sdk-dir "/Users/codeguru/workspace/flutter")
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
