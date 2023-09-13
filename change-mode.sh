@@ -1,13 +1,11 @@
 #!/bin/bash
-if [ -d "./.emacs.d.pure" ]
+if [ -d "./.config/vanilaemacs" ]
 then
 echo "changing to pure emacs"
-mv ~/.emacs.d ~/.emacs.d.doom
-mv ~/.emacs.d.pure ~/.emacs.d
-mv ~/.emacs.bak ~/.emacs
+mv ~/.config/emacs ~/.config/doomemacs
+mv ~/.config/vanilaemacs ~/.config/emacs
 else
 echo "changing to doom emacs"
-mv ~/.emacs.d ~/.emacs.d.pure
-mv ~/.emacs.d.doom ~/.emacs.d
-mv ~/.emacs ~/.emacs.bak
+mv ~/.config/emacs ~/.config/vanilaemacs
+mv ~/.config/doomemacs ~/.config/emacs
 fi
