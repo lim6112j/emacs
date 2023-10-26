@@ -89,6 +89,8 @@
                                 "--header-insertion=never"
                                 "--header-insertion-decorators=0"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+(after! dap-mode
+  (require 'dap-cpptools))
 (use-package! evil-escape
 
 :init
@@ -154,7 +156,7 @@ lsp-ui-sideline-enable t))
                      ;; Also handle undocumented (<active> <inactive>) form.
                      ((numberp (cadr alpha)) (cadr alpha)))
                100)
-          '(85 . 50) '(100 . 100)))))
+          '(80 . 50) '(100 . 100)))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 (setq exec-path (append exec-path '("/Users/byeongcheollim/.rbenv/versions/2.7.5/bin")))
 ;; accept completion from copilot and fallback to company
