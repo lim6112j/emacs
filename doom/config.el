@@ -93,6 +93,8 @@
                                 "--header-insertion=never"
                                 "--header-insertion-decorators=0"))
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
+(after! dap-mode
+  (require 'dap-cpptools))
 (use-package! evil-escape
 
 :init
