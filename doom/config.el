@@ -95,6 +95,7 @@
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (after! dap-mode
   (require 'dap-cpptools))
+(require 'dap-node)
 (use-package! evil-escape
 
 :init
