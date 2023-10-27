@@ -189,9 +189,21 @@ lsp-ui-sideline-enable t))
       :localleader
       :desc "dap-debugger"
       "d" #'dap-debug)
-(map! :after python
+(map! :after dap-mode
       :localleader
       :desc "dap-next"
       "n" #'dap-next)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-breakpoint-add"
+      "a" #'dap-breakpoint-add)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-breakpoint-delete"
+      "x" #'dap-breakpoint-delete)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-disconnect"
+      "c" #'dap-disconnect)
 (provide 'config)
 ;;; config.el ends here
