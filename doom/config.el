@@ -91,6 +91,12 @@
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 (after! dap-mode
   (require 'dap-cpptools))
+(require 'dap-node)
+(require 'dap-python)
+;; if you installed debugpy, you need to set this
+;; https://github.com/emacs-lsp/dap-mode/issues/306
+(setq dap-python-debugger 'debugpy)
+
 (use-package! evil-escape
 
 :init
