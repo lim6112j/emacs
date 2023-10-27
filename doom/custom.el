@@ -8,7 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(dired-auto-revert-buffer t)
- '(dired-create-destination-dirs 'ask)
+ '(dired-create-destination-dirs 'ask t)
  '(dired-dwim-target t)
  '(dired-hide-details-hide-symlink-targets nil)
  '(dired-listing-switches "-ahl -v --group-directories-first")
@@ -31,40 +31,21 @@
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
- '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/tensorflowEnv")
+ '(lsp-pyright-venv-directory nil)
+ '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/venv")
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
  '(org-agenda-files
    '("~/org/roam/20220917025026-ciel.org" "/Users/codeguru/org/1.org" "/Users/codeguru/org/gecko.org" "/Users/codeguru/org/journal.org" "/Users/codeguru/org/main.org" "/Users/codeguru/org/notes.org" "/Users/codeguru/org/todo.org"))
  '(org-roam-capture-templates
-   '(("l" "programming language" plain "* Characteristic
-
-- Family: %?
-- inspired by: 
-
-* Reference:
-
-" :target
-(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
-        ")
-:unnarrowed t nil nil)
-     ("p" "project" plain "* Goals
-
-%?
-
-* Tasks
-
-** TODO Add initial tasks
-
-* Dates
-
-" :if-new
-(file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
-#+filetags: Project")
-:unnarrowed t)
+   '(("l" "programming language" plain "* Characteristic\12\12- Family: %?\12- inspired by: \12\12* Reference:\12\12" :target
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\12        ")
+      :unnarrowed t nil nil)
+     ("p" "project" plain "* Goals\12\12%?\12\12* Tasks\12\12** TODO Add initial tasks\12\12* Dates\12\12" :if-new
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\12#+filetags: Project")
+      :unnarrowed t)
      ("d" "default" plain "%?" :target
-      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}
-")
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\12")
       :unnarrowed t)))
  '(org-roam-db-autosync-mode t)
  '(org-src-lang-modes

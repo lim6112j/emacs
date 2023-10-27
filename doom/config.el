@@ -184,5 +184,14 @@ lsp-ui-sideline-enable t))
                     org-roam-ui-update-on-save t
                     org-roam-ui-open-on-start t))
 (setq exec-path (append exec-path '("/Users/codeguru/.nvm/versions/node/v14.21.1/bin/node")))
+;; dap-mode key binding
+(map! :after python
+      :localleader
+      :desc "dap-debugger"
+      "d" #'dap-debug)
+(map! :after python
+      :localleader
+      :desc "dap-next"
+      "n" #'dap-next)
 (provide 'config)
 ;;; config.el ends here
