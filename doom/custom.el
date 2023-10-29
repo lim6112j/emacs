@@ -32,7 +32,7 @@
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
  '(lsp-pyright-venv-directory nil)
- '(lsp-pyright-venv-path "/Users/codeguru/.pyenv/versions/venv")
+ '(lsp-pyright-venv-path nil)
  '(lsp-xml-format-split-attributes t)
  '(menu-bar-mode nil)
  '(org-agenda-files
