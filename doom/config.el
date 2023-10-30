@@ -205,5 +205,10 @@ lsp-ui-sideline-enable t))
       :localleader
       :desc "dap-disconnect"
       "c" #'dap-disconnect)
+;; zig setting
+;; Setup lsp-mode as desired.
+;; See https://emacs-lsp.github.io/lsp-mode/page/installation/ for more information.
+;; Either place zls in your PATH or add the following:
+(setq lsp-zig-zls-executable "/Users/codeguru/language-server/zig/zls")
 (provide 'config)
 ;;; config.el ends here
