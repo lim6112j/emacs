@@ -8,7 +8,7 @@
  '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(dired-auto-revert-buffer t)
- '(dired-create-destination-dirs 'ask)
+ '(dired-create-destination-dirs 'ask t)
  '(dired-dwim-target t)
  '(dired-hide-details-hide-symlink-targets nil)
  '(dired-listing-switches "-ahl -v --group-directories-first")
@@ -31,10 +31,11 @@
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
- '(lsp-pyright-venv-directory "./venv")
+ '(lsp-pyright-venv-directory nil)
  '(lsp-pyright-venv-path nil)
  '(lsp-xml-format-split-attributes t)
  '(lsp-zig-zls-executable "~/workspace/zig/zls/zig-out/bin/zls")
+ '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(menu-bar-mode nil)
  '(org-agenda-files
    '("~/org/roam/" "/Users/byeongcheollim/org/1.org" "/Users/byeongcheollim/org/gecko.org" "/Users/byeongcheollim/org/journal.org" "/Users/byeongcheollim/org/notes.org" "/Users/byeongcheollim/org/todo.org"))

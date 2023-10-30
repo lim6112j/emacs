@@ -96,6 +96,10 @@
 (after! dap-mode
   (require 'dap-cpptools))
 (require 'dap-node)
+(require 'dap-python)
+;; if you installed debugpy, you need to set this
+;; https://github.com/emacs-lsp/dap-mode/issues/306
+(setq dap-python-debugger 'debugpy)
 (use-package! evil-escape
 
 :init
@@ -207,5 +211,26 @@ lsp-ui-sideline-enable t))
                     org-roam-ui-follow t
                     org-roam-ui-update-on-save t
                     org-roam-ui-open-on-start t))
+;; dap-mode key binding
+(map! :after python
+      :localleader
+      :desc "dap-debugger"
+      "d" #'dap-debug)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-next"
+      "n" #'dap-next)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-breakpoint-add"
+      "a" #'dap-breakpoint-add)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-breakpoint-delete"
+      "x" #'dap-breakpoint-delete)
+(map! :after dap-mode
+      :localleader
+      :desc "dap-disconnect"
+      "c" #'dap-disconnect)
 (provide 'config)
 ;;; config.el ends here
