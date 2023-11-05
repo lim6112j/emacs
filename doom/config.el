@@ -210,5 +210,10 @@ lsp-ui-sideline-enable t))
 ;; See https://emacs-lsp.github.io/lsp-mode/page/installation/ for more information.
 ;; Either place zls in your PATH or add the following:
 (setq lsp-zig-zls-executable "/Users/codeguru/language-server/zig/zls")
+;; nimlsp
+(use-package! nim-mode
+  :ensure t
+  :hook
+  (nim-mode . lsp))
 (provide 'config)
 ;;; config.el ends here

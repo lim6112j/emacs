@@ -33,6 +33,7 @@
  '(lsp-java-jdt-download-url
    "http://download.eclipse.org/che/che-ls-jdt/snapshots/che-jdt-language-server-latest.tar.gz")
  '(lsp-metals-java-home "")
+ '(lsp-nim-langserver "nimlsp")
  '(lsp-pyright-venv-directory nil)
  '(lsp-pyright-venv-path nil)
  '(lsp-xml-format-split-attributes t)
