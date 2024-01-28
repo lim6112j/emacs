@@ -40,6 +40,7 @@
  '(menu-bar-mode nil)
  '(org-agenda-files
    '("~/org/roam/20220917025026-ciel.org" "/Users/codeguru/org/1.org" "/Users/codeguru/org/gecko.org" "/Users/codeguru/org/journal.org" "/Users/codeguru/org/main.org" "/Users/codeguru/org/notes.org" "/Users/codeguru/org/todo.org"))
+ '(org-preview-latex-default-process 'dvipng)
  '(org-roam-capture-templates
    '(("l" "programming language" plain "* Characteristic\12\12- Family: %?\12- inspired by: \12\12* Reference:\12\12" :target
       (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\12        ")
